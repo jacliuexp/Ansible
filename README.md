@@ -74,5 +74,12 @@ webserver2 ansible_host=10.0.0.2 ansible_user=user2
 [webservers:vars]
 http_port=80
 ```
+```
+#### the same as above
+group_vars/databases 
+group_vars/webservers
+host_vars/host1
+host_vars/host2
+```
 
 
