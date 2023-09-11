@@ -1,4 +1,5 @@
 ## Ansible
+https://spacelift.io/blog/ansible-variables
 ```
 #### Variable in Task
 - name: Example Simple Variable
