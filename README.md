@@ -26,3 +26,45 @@
           - "Hello from Ansible playbook!"
           - "This is running on {{ inventory_hostname }}"
 ```
+
+```
+#### Ansible facts
+##### Getting system and hardware facts gathered about the current host during playbook execution (OS type, IP, CUP/Mem)
+```
+
+```
+#### Connection Variable
+---
+- name: Echo message on localhost
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  vars:
+    message: "Hello from Ansible playbook on localhost!"
+  tasks:
+    - name: Echo message and connection type
+      ansible.builtin.shell: "echo '{{ message }}' ; echo 'Connection type: {{ ansible_connection }}'"
+      register: echo_output
+
+    - name: Display output
+      ansible.builtin.debug:
+        msg: "{{ echo_output.stdout_lines }}"
+```
+```
+#### Register Variable
+- name: Example Register Variable Playbook
+  hosts: all
+  
+  tasks:
+  - name: Run a script and register the output as a variable
+    shell: "find hosts"
+    args:
+      chdir: "/etc"
+    register: find_hosts_output
+  - name: Use the output variable of the previous task
+    debug:
+      var: find_hosts_output
+```
+
+
+
