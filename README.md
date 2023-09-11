@@ -65,6 +65,14 @@
     debug:
       var: find_hosts_output
 ```
+```
+#### Host vars and Group Vars
+[webservers]
+webserver1 ansible_host=10.0.0.1 ansible_user=user1
+webserver2 ansible_host=10.0.0.2 ansible_user=user2
 
+[webservers:vars]
+http_port=80
+```
 
 
