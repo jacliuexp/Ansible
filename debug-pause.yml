@@ -1,0 +1,13 @@
+---
+- name: Ansible debug module in action
+  hosts: localhost
+  tasks:
+    - name: Print a simple statement
+      debug:
+        msg: "Hello World!"
+    - pause:
+        minutes: 5
+    - name: After 5 min
+      debug:
+        msg: "After 5 min: New Hello World"
+      
