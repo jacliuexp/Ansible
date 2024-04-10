@@ -1,6 +1,19 @@
 ## Ansible
 ```
+# show version
 ansible --version
+# ping remote to see if reachable with ansible
+ansible all -i 172.31.0.11, -m ping    # if no comma, it will take 172.31.0.11 as inventory file instead
+ansible all -i web01,web02 -m ping
+
+ansible all -i us-d-nagios-0,nagios-0 -m command --args 'uptime'  # run uptime on 2 servers
+ansible all -i us-d-nagios-0,nagios-0 -m command --args 'sudo apt-get install -y apache2'   # install apache2 on 2 servers
+
+
+
+
+
+
 ```
 
 https://spacelift.io/blog/ansible-variables
