@@ -1,4 +1,8 @@
 ## Ansible
+```
+ansible --version
+```
+
 https://spacelift.io/blog/ansible-variables
 ```
 #### Variable in Task
