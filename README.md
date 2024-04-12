@@ -99,5 +99,14 @@ group_vars/webservers
 host_vars/host1
 host_vars/host2
 ```
-
+```
+#### Display all the vars
+---
+- name: Display all variables/facts known for a host
+  hosts:
+  - us-d-nagios-0
+  tasks:
+  - debug:
+      var: hostvars[inventory_hostname]
+```
 
