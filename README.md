@@ -100,7 +100,7 @@ host_vars/host1
 host_vars/host2
 ```
 ```
-#### Display all the vars
+#### Display all the hostvars
 ---
 - name: Display all variables/facts known for a host
   hosts:
@@ -111,7 +111,6 @@ host_vars/host2
 ```
 ```
 #### Display all the vars
-[experian-ais-dev->ec2-user@api-0~/jack/ansiblevar]$ cat b.yml
 - hosts: localhost
   gather_facts: false
   vars:
