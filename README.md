@@ -109,4 +109,15 @@ host_vars/host2
   - debug:
       var: hostvars[inventory_hostname]
 ```
-
+```
+#### Display all the vars
+[experian-ais-dev->ec2-user@api-0~/jack/ansiblevar]$ cat b.yml
+- hosts: localhost
+  gather_facts: false
+  vars:
+    test_var1: A
+    test_var2: "{{ test_var1 }}"
+  tasks:
+    - debug:
+        var: vars
+```
