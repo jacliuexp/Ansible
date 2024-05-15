@@ -109,8 +109,8 @@ host_vars/host2
   - debug:
       var: hostvars[inventory_hostname]
 ```
-```
 #### Display all the vars
+```
 - hosts: localhost
   gather_facts: false
   vars:
