@@ -103,8 +103,8 @@ host_vars/host2
 #### Display all the hostvars
 ---
 - name: Display all variables/facts known for a host
-  hosts:
-  - us-d-nagios-0
+  hosts: localhost
+  gather_facts: false
   tasks:
   - debug:
       var: hostvars[inventory_hostname]
