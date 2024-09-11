@@ -8,17 +8,14 @@ ansible all -i web01,web02 -m ping
 
 ansible all -i us-d-nagios-0,nagios-0 -m command --args 'uptime'  # run uptime on 2 servers
 ansible all -i us-d-nagios-0,nagios-0 -m command --args 'sudo apt-get install -y apache2'   # install apache2 on 2 servers
+```
 
-Ansible configure
+## Ansible configure search order
+```
 ANSIBLE_CONFIG (an environment variable)
 ansible.cfg (in the current directory)
 .ansible.cfg (in the home directory)
 /etc/ansible/ansible.cfg
-
-
-
-
-
 ```
 
 https://spacelift.io/blog/ansible-variables
