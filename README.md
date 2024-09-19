@@ -1,4 +1,11 @@
 ## Ansible
+
+### Asnible log enable
+```
+export ANSIBLE_LOG_PATH=~/ansible.log
+export ANSIBLE_DEBUG=True
+```
+
 ```
 # show version
 ansible --version
