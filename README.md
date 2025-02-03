@@ -129,3 +129,9 @@ host_vars/host2
     - debug:
         var: vars
 ```
+#### Ansible vault
+```
+ansible-vault encrypt encrypt_me.txt
+ansible-vault decrypt vault.yml
+ansible-vault view vault.yml  
+```
