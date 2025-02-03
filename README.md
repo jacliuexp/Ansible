@@ -131,6 +131,7 @@ host_vars/host2
 ```
 #### Ansible vault
 ```
+## vault_password_file = ~/.ansible-vault-key  in ansible.cfg
 ansible-vault encrypt encrypt_me.txt
 ansible-vault decrypt vault.yml
 ansible-vault view vault.yml  
